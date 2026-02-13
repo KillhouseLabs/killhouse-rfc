@@ -1,0 +1,83 @@
+site_name: KILLHOUSE Docs
+site_description: KILLHOUSE System Architecture & RFC Documentation
+site_url: https://your-github-username.github.io/killhouse-docs/
+repo_url: https://github.com/your-github-username/killhouse-docs
+repo_name: killhouse-docs
+
+theme:
+  name: material
+  language: ko
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: ko
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.mark
+  - pymdownx.keys
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-github-username/killhouse-docs
+
+extra_javascript:
+  - https://unpkg.com/mermaid@11/dist/mermaid.min.js
+
+nav:
+  - Home: index.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - AWS Infrastructure: architecture/aws-infrastructure.md
+      - Module Reference: architecture/module-reference.md
+  - RFC:
+      - Index: rfc/index.md
+      - Infrastructure:
+          - RFC-001 Network Topology: rfc/rfc-001-network-topology.md
+          - RFC-002 Communication Protocol: rfc/rfc-002-communication-protocol.md
+          - RFC-003 Queue Architecture: rfc/rfc-003-queue-architecture.md
+          - RFC-004 Sandbox Isolation: rfc/rfc-004-sandbox-isolation.md
+      - Auth & Billing:
+          - RFC-005 Authentication: rfc/rfc-005-authentication.md
+          - RFC-006 Billing: rfc/rfc-006-billing.md
+      - API:
+          - RFC-007 API Specification: rfc/rfc-007-api-specification.md
+      - Workflow:
+          - RFC-008 Project & Analysis: rfc/rfc-008-project-analysis.md
+          - RFC-009 Auto Exploit Agent: rfc/rfc-009-auto-exploit-agent.md
