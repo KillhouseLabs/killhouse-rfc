@@ -1,8 +1,8 @@
 site_name: KILLHOUSE Docs
 site_description: KILLHOUSE System Architecture & RFC Documentation
-site_url: https://your-github-username.github.io/killhouse-docs/
-repo_url: https://github.com/your-github-username/killhouse-docs
-repo_name: killhouse-docs
+site_url: https://killhouselabs.github.io/killhouse-rfc/
+repo_url: https://github.com/KillhouseLabs/killhouse-rfc
+repo_name: KillhouseLabs/killhouse-rfc
 
 theme:
   name: material
@@ -21,13 +21,21 @@ theme:
         icon: material/brightness-7
         name: Dark mode
   features:
+    - navigation.instant
+    - navigation.tracking
     - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.indexes
     - navigation.top
     - toc.follow
+    - toc.integrate
+    - search.suggest
     - search.highlight
     - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
 
 plugins:
   - search:
@@ -55,7 +63,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-github-username/killhouse-docs
+      link: https://github.com/KillhouseLabs/killhouse-rfc
 
 extra_javascript:
   - https://unpkg.com/mermaid@11/dist/mermaid.min.js
